@@ -1,8 +1,9 @@
 <template lang="pug">
 .full-screen
   .logo 
-    img(src='~/assets/camper.png')
+    img(src='~/assets/camper_old.svg')
   iframe(src='https://my.spline.design/carcampingphysicscopy-7d72a1efc344d683920c74b8e424b28e/' frameborder='0' width='100%' height='100%')
+  .instructions Use W,A,S,D to play*
 </template>
 
 <style>
@@ -74,6 +75,24 @@ table {
   height: auto;
   object-fit: cover;
 }
+
+.instructions {
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  display: none;
+  font-size: 18px;
+  font-family: 'Verdana', sans-serif;
+  font-weight: bold;
+  color:darkgreen;
+}
+
+@media (min-width: 1400px) {
+  .instructions {
+    display: inline-block;
+  }
+}
+
 </style>
 
 <script>
